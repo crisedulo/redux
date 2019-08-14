@@ -14,6 +14,7 @@ class Album extends Component {
         }
         else
         {
+            this.loadPhotos()
             import ("../data/photos").then(module =>{
                 this.props.setPhotos(module.default.mediaItems)
             })
